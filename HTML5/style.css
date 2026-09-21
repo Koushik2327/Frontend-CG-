@@ -1,0 +1,21 @@
+*{
+    box-sizing:border-box ;
+}
+body{
+    background-image: url(Assets/images/joker-the-gritty-vigilante-sx-1920x1080.jpg);
+}
+
+#tab{
+    background-color: white;
+    
+    /* border: 8px groove rgb(0, 204, 255);  */
+    
+    width: fit-content;
+    /* margin-left: 40%;
+    margin-top: 50px; */
+    margin: 50px 0px 0px 40%;
+    padding: 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
