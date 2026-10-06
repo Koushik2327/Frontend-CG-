@@ -1,0 +1,39 @@
+
+body{
+    margin: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: black;
+    color: white;
+}
+
+.login-btn{
+    padding: 10px;
+}
+.signup-btn{
+    padding: 10px;
+}
+.nav-links{
+    list-style-type: none;
+    display: flex;
+    padding: 0px;
+    gap: 40px;
+    align-items: center;
+}
+.menu{
+    display: none;
+}
+
+@media (max-width:650px) {
+    .nav-links{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+}

@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #FAFAF5;
+}
+.header{
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+.navbar{
+    width: 100%;
+    box-sizing: border-box;
+    padding:15px 240px;
+    background-color:#F6F6F5 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo{
+    color:#3D5A45 ;
+}
+.logo h1{
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     
+}
+
+.main-nav{
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+    font-family: 'Inter', sans-serif;
+}
+.main-nav a{
+    text-decoration: none;
+    color: #3D5A45;
+}
+
+.hero1{
+    width: 100%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://static.vecteezy.com/system/resources/thumbnails/060/658/366/small/protective-brown-cow-standing-with-calf-on-sunny-green-pasture-photo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 300px;
+}
+.content{
+    
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    gap: 1.5rem;
+}
+.h1 h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem; 
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.para{
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+}
+
+.hero1-btn{
+    display: flex;
+    gap: 20px;
+}
+
+.hero1-btn button{
+    
+    padding: 20px 40px;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: 540;
+    transition: all 0.1s linear 0s;
+}
+
+.btn1{
+    background-color: #3D5A45;
+    border: none;
+    
+}
+
+.btn2{
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.btn1:hover{
+    background-color: white;
+    border:2px solid black;
+    color: black;
+
+}
+
+.btn2:hover{
+    background-color: white;
+    border: none;
+    color: black;
+}
+
