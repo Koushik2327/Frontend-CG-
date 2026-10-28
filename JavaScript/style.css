@@ -1,0 +1,19 @@
+.card{
+    width: 300px;
+    border: 3px solid black;
+}
+.card>img{
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.sw{
+    display: flex;
+    gap: 20px;
+}

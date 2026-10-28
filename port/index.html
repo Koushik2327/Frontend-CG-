@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koushik Garacheta | Java Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#7e22ce',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-slate-200">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-darker/80 backdrop-blur-sm z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold gradient-text">Koushik Garacheta</a>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-slate-200 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
+                <a href="#home" class="block py-2 nav-link active">Home</a>
+                <a href="#about" class="block py-2 nav-link">About</a>
+                <a href="#skills" class="block py-2 nav-link">Skills</a>
+                <a href="#projects" class="block py-2 nav-link">Projects</a>
+                <a href="#contact" class="block py-2 nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="gradient-text">Koushik</span></h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-slate-300">Java Full Stack Developer</h2>
+                <p class="text-lg mb-8 text-slate-400 max-w-lg">
+                    Aspiring Java Full Stack Developer with strong knowledge of Core Java, SQL, JDBC,
+                    HTML, CSS, JavaScript, and Object-Oriented Programming. I build scalable
+                    applications and continuously learn modern backend technologies like Spring Boot.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="px-6 py-3 rounded-full btn-primary font-medium">Hire Me</a>
+                    <a href="#projects" class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition">View Work</a>
+                </div>
+                <div class="flex mt-8 space-x-4">
+                    <a href="https://github.com/Koushik2327" target="_blank" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/koushikgaracheta" target="_blank" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary blur-xl opacity-20"></div>
+                    <img src="assets/profile.jpeg"
+                         alt="Koushik Garacheta"
+                         class="relative w-full h-full object-cover rounded-full border-4 border-slate-800 floating">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-darker">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="gradient-text">Me</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="relative w-64 h-64">
+                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary to-secondary blur-xl opacity-20"></div>
+                        <img src="assets/profile.jpeg"
+                             alt="About Koushik"
+                             class="relative w-full h-full object-cover rounded-2xl border-4 border-slate-800">
+                    </div>
+                </div>
+
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-bold mb-6">Who am I?</h3>
+                    <p class="text-slate-400 mb-6">
+                        I'm a Computer Science graduate from Sathyabama Institute of Science and Technology,
+                        based in Hyderabad. My journey in software development started with a curiosity
+                        about how backend systems handle real-world data, which led me to Java and full
+                        stack development. I enjoy writing clean, object-oriented code and solving problems
+                        with data structures.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h4 class="font-semibold mb-2">Name: <span class="text-slate-300">Koushik Garacheta</span></h4>
+                            <h4 class="font-semibold mb-2">Email: <span class="text-slate-300">kgoud7340@gmail.com</span></h4>
+                            <h4 class="font-semibold mb-2">Phone: <span class="text-slate-300">+91 6305695169</span></h4>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Degree: <span class="text-slate-300">B.E. CSE</span></h4>
+                            <h4 class="font-semibold mb-2">Role: <span class="text-slate-300">Java Full Stack Developer</span></h4>
+                            <h4 class="font-semibold mb-2">Location: <span class="text-slate-300">Hyderabad, Telangana</span></h4>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <a href="assets/Koushik_Garacheta_Resume.pdf" target="_blank" class="px-6 py-3 rounded-full btn-primary font-medium">Download CV</a>
+                        <a href="#contact" class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Timeline -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold mb-8 text-center">My <span class="gradient-text">Experience</span></h3>
+
+                <div class="relative max-w-3xl mx-auto">
+                    <div class="absolute left-1/2 h-full w-0.5 bg-slate-700 transform -translate-x-1/2"></div>
+
+                    <div class="mb-8 flex justify-between items-center w-full timeline-item">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="order-1 w-5/12 px-4 py-4 bg-slate-800 rounded-lg shadow-lg">
+                            <h4 class="text-lg font-bold mb-2">Java Full Stack Trainee</h4>
+                            <p class="text-sm text-slate-400 mb-2">CodeGyan IT Solutions • 2023 - Present</p>
+                            <p class="text-slate-300">
+                                Learning Core Java, JDBC, Spring Boot, MySQL, HTML, CSS, and JavaScript through
+                                practical projects. Developing applications using OOP concepts and practicing
+                                Data Structures with Git/GitHub.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 flex justify-between items-center w-full timeline-item">
+                        <div class="order-1 w-5/12 px-4 py-4 bg-slate-800 rounded-lg shadow-lg">
+                            <h4 class="text-lg font-bold mb-2">Project Intern</h4>
+                            <p class="text-sm text-slate-400 mb-2">HCL Enterprises • Jul 2023 - Nov 2023</p>
+                            <p class="text-slate-300">
+                                Developed the Art-Piece website using HTML, CSS, and JavaScript. Designed
+                                responsive web pages and collaborated with the development team using Git.
+                            </p>
+                        </div>
+                        <div class="order-1 w-5/12"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Timeline -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold mb-8 text-center">My <span class="gradient-text">Education</span></h3>
+
+                <div class="relative max-w-3xl mx-auto">
+                    <div class="absolute left-1/2 h-full w-0.5 bg-slate-700 transform -translate-x-1/2"></div>
+
+                    <div class="mb-8 flex justify-between items-center w-full timeline-item">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="order-1 w-5/12 px-4 py-4 bg-slate-800 rounded-lg shadow-lg">
+                            <h4 class="text-lg font-bold mb-2">B.E. Computer Science</h4>
+                            <p class="text-sm text-slate-400 mb-2">Sathyabama Institute of Science and Technology • 2021 - 2025</p>
+                            <p class="text-slate-300">
+                                Chennai, Tamil Nadu. Built a strong foundation in programming, data structures,
+                                databases, and software engineering.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 flex justify-between items-center w-full timeline-item">
+                        <div class="order-1 w-5/12 px-4 py-4 bg-slate-800 rounded-lg shadow-lg">
+                            <h4 class="text-lg font-bold mb-2">Intermediate (MPC)</h4>
+                            <p class="text-sm text-slate-400 mb-2">Gyannville Academy • 2019 - 2021</p>
+                            <p class="text-slate-300">
+                                Hyderabad, Telangana. Completed Mathematics, Physics, and Chemistry with a
+                                focus on analytical and problem-solving skills.
+                            </p>
+                        </div>
+                        <div class="order-1 w-5/12"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="gradient-text">Skills</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Technical Skills</h3>
+
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Java</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">SQL / MySQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">HTML5 &amp; CSS3</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">JavaScript</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">JDBC</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Spring Boot (Basics)</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Professional Skills</h3>
+
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Problem Solving</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Teamwork</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Communication</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Leadership &amp; Event Management</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Adaptability</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Technologies -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold mb-8 text-center">Tools &amp; <span class="gradient-text">Technologies</span></h3>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fab fa-java text-4xl text-orange-500 mb-2"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fas fa-database text-4xl text-blue-300 mb-2"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fas fa-plug text-4xl text-cyan-400 mb-2"></i>
+                        <span>JDBC</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fas fa-leaf text-4xl text-green-500 mb-2"></i>
+                        <span>Spring Boot</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fab fa-css3-alt text-4xl text-blue-500 mb-2"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fab fa-js text-4xl text-yellow-400 mb-2"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fab fa-git-alt text-4xl text-orange-600 mb-2"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fab fa-github text-4xl text-slate-100 mb-2"></i>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fas fa-code text-4xl text-purple-400 mb-2"></i>
+                        <span>Eclipse</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fas fa-terminal text-4xl text-gray-300 mb-2"></i>
+                        <span>VS Code</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fas fa-cubes text-4xl text-pink-400 mb-2"></i>
+                        <span>OOP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold mb-8 text-center">Lang<span class="gradient-text">uages</span></h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fas fa-language text-4xl text-primary mb-2"></i>
+                        <span class="font-semibold">English</span>
+                        <span class="text-sm text-slate-400">Professional</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fas fa-language text-4xl text-primary mb-2"></i>
+                        <span class="font-semibold">Telugu</span>
+                        <span class="text-sm text-slate-400">Native</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fas fa-language text-4xl text-primary mb-2"></i>
+                        <span class="font-semibold">Hindi</span>
+                        <span class="text-sm text-slate-400">Conversational</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications & Activities -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold mb-8 text-center">Certifications &amp; <span class="gradient-text">Activities</span></h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="flex flex-col items-center text-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fas fa-certificate text-4xl text-primary mb-3"></i>
+                        <span class="font-semibold mb-1">Java Full Stack Training</span>
+                        <span class="text-sm text-slate-400">CodeGyan IT Solutions (Ongoing)</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fas fa-certificate text-4xl text-secondary mb-3"></i>
+                        <span class="font-semibold mb-1">Frontend Development (HTML &amp; CSS)</span>
+                        <span class="text-sm text-slate-400">Great Learning</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fab fa-google text-4xl text-blue-400 mb-3"></i>
+                        <span class="font-semibold mb-1">Google UX Design</span>
+                        <span class="text-sm text-slate-400">Foundations of UX Design</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fas fa-users text-4xl text-yellow-400 mb-3"></i>
+                        <span class="font-semibold mb-1">Google Developer Student Clubs</span>
+                        <span class="text-sm text-slate-400">Active Member</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-slate-800 rounded-lg card-hover">
+                        <i class="fas fa-gamepad text-4xl text-pink-500 mb-3"></i>
+                        <span class="font-semibold mb-1">HP OMEN Valorant Campus Quest</span>
+                        <span class="text-sm text-slate-400">Event Coordinator</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-darker">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="gradient-text">Projects</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1470&q=80"
+                             alt="Virtual Pet Management System"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Virtual Pet Management System</h3>
+                        <p class="text-slate-400 mb-4">
+                            A console-based Java application built with OOP concepts. Includes feeding,
+                            playing, sleeping, and health monitoring modules.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Java</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">OOP</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/Koushik2327" target="_blank" class="text-primary hover:text-secondary">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=1470&q=80"
+                             alt="Art Gallery Website"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Art Gallery Website</h3>
+                        <p class="text-slate-400 mb-4">
+                            A responsive online art gallery website with an interactive UI. Source code
+                            managed using Git during the HCL Enterprises internship.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">HTML5</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">CSS3</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/Koushik2327" target="_blank" class="text-primary hover:text-secondary">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://github.com/Koushik2327" target="_blank" class="px-8 py-3 rounded-full btn-primary font-medium inline-flex items-center">
+                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                    <p class="text-slate-400 mb-8">
+                        Feel free to reach out for any questions or opportunities. I'm open to discussing
+                        entry-level Java Developer roles, projects, and ideas where I can contribute and grow.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-slate-800 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Location</h4>
+                                <p class="text-slate-400">Hyderabad, Telangana, India</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-slate-800 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <p class="text-slate-400">kgoud7340@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-slate-800 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Phone</h4>
+                                <p class="text-slate-400">+91 6305695169</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/Koushik2327" target="_blank" class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/koushikgaracheta" target="_blank" class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block mb-2 font-medium">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 font-medium">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block mb-2 font-medium">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none" required></textarea>
+                        </div>
+                        <button type="submit" class="px-8 py-3 rounded-full btn-primary font-medium w-full">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold gradient-text">Koushik</a>
+                    <p class="text-slate-400 mt-2">© 2026 Koushik Garacheta. All rights reserved.</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="https://github.com/Koushik2327" target="_blank" class="text-slate-400 hover:text-primary transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/koushikgaracheta" target="_blank" class="text-slate-400 hover:text-blue-600 transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="mailto:kgoud7340@gmail.com" class="text-slate-400 hover:text-pink-600 transition">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500">
+                <p>Made with <i class="fas fa-heart text-red-500"></i> and lots of <i class="fas fa-coffee text-amber-500"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Update active link on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+
+            const backToTopButton = document.getElementById('back-to-top');
+            if (scrollPosition > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        // Back to top button
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Animate skill bars on scroll
+        const animateSkillBars = () => {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            const skillsSection = document.getElementById('skills');
+            const skillsSectionTop = skillsSection.offsetTop;
+            const windowHeight = window.innerHeight;
+
+            if (window.scrollY > skillsSectionTop - windowHeight + 200) {
+                skillBars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 100);
+                });
+
+                window.removeEventListener('scroll', animateSkillBars);
+            }
+        };
+
+        window.addEventListener('scroll', animateSkillBars);
+    </script>
+</body>
+</html>
